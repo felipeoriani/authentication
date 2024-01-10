@@ -1,2 +1,3 @@
-# authentication
-Exploring authentication mechanisms using .NET and C#
+# Authentication
+
+Exploring authentication mechanisms using .NET and C#!
