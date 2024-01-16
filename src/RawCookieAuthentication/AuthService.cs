@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.DataProtection;
 
 namespace RawCookieAuthentication;
 
-internal class AuthService(IDataProtectionProvider dataProtectionProvider, IHttpContextAccessor accessor)
+public class AuthService(IDataProtectionProvider dataProtectionProvider, IHttpContextAccessor accessor)
 {
     private const string AuthCookiePurpose = "auth-cookie";
 
@@ -16,12 +16,12 @@ internal class AuthService(IDataProtectionProvider dataProtectionProvider, IHttp
     {
         var expiresAt = DateTime.Now.AddDays(1);
         var maxAge = (expiresAt - DateTime.Now).TotalSeconds;
-        HttpContext.Response.Headers["set-cookie"] = $"auth={Protector.Protect("user:felipe")}; expires={expiresAt:R}; max-age:{maxAge}";
+        HttpContext.Response.Headers.SetCookie = $"auth={Protector.Protect("user:felipe")}; expires={expiresAt:R}; max-age:{maxAge}";
     }
 
     public void SignOut()
     {
-        HttpContext.Response.Headers["set-cookie"] = "auth=; expires=Thu, 01 Jan 1970 00:00:00 GMT; max-age: 0";
+        HttpContext.Response.Headers.SetCookie = "auth=; expires=Thu, 01 Jan 1970 00:00:00 GMT; max-age: 0";
         HttpContext.User = new ClaimsPrincipal(new ClaimsIdentity());
     }
 
