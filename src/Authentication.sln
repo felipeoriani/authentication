@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawCookieAuthentication", "RawCookieAuthentication\RawCookieAuthentication.csproj", "{29A7E0B1-4004-496C-9909-526602688FDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawCookieAuthentication.Tests", "RawCookieAuthentication.Tests\RawCookieAuthentication.Tests.csproj", "{CD9C8404-8E3A-42B8-B527-A9B873FBEFC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{29A7E0B1-4004-496C-9909-526602688FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29A7E0B1-4004-496C-9909-526602688FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29A7E0B1-4004-496C-9909-526602688FDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD9C8404-8E3A-42B8-B527-A9B873FBEFC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD9C8404-8E3A-42B8-B527-A9B873FBEFC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD9C8404-8E3A-42B8-B527-A9B873FBEFC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD9C8404-8E3A-42B8-B527-A9B873FBEFC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
